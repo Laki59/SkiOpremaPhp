@@ -34,7 +34,7 @@ Preview:
 Regular customer(in the screenshots u can see the admin button in navbar,but its not there for a regular customer,and there's no way he can breach to admin side.):
 
 home:
-![image](https://github.com/user-attachments/assets/4d7e54ad-6186-46fa-b359-c27485af564a)
+![image](https://github.com/user-attachments/assets/0bcad9d3-7f33-49f3-a4f0-dfd75b9bfb6f)
 ![image](https://github.com/user-attachments/assets/ddb80671-9e30-4964-9614-7ec875c6bdc6)
 ![image](https://github.com/user-attachments/assets/83d5e951-217c-4b25-9e12-197ab1f6ceef)
 ![image](https://github.com/user-attachments/assets/55e7307c-b89b-4346-9ba4-fd941dc7e6fc)
