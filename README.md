@@ -10,6 +10,7 @@ This app provides most basic needs an E-commerce shop needs:
 - Search feature in the shop with price range and type of item
 - Admin feature for a user with premission
 - Admin can look at all the users,orders,products and messages(will be changed w/ mail server)
+- It's on both English and Serbian which is stored in cookies
 
 The user can purchase and review any item he wants. The items can be purchased in any quantity the user wants via the store page and be previewd in the cart.
 Afterwards the user can checkout and buy this products. Currently only option is cash on delivery,but I'm looking to add a paypal sandbox server.
