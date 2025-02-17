@@ -1,5 +1,25 @@
+<?php
+$lang = "rs";
+
+
+if (isset($_GET['lang'])) {
+  $lang = $_GET['lang'];
+  setcookie("lang", $lang, time() + (86400 * 30), "/"); // Stavi cookie na 30 dana
+} elseif (isset($_COOKIE['lang'])) {
+  $lang = $_COOKIE['lang']; // Koristi jezik iz cookija
+}
+
+$Language = parse_ini_file("assets/languages/$lang.ini");
+
+
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
     <div class="container">
+
+<!-- jQuery and Bootstrap Bundle (includes Popper.js) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,6 +49,15 @@
           <li class="nav-item">
             <a href="login.php" class="nav-link"><i class="fa-solid fa-user"></i></a>
           </li>
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="nav-link" href="?lang=en">engleski</a>
+        <a class="nav-link" href="?lang=rs">srpski</a>
+        </div>
+      </li>
 
           <?php
                 // Example PHP code to check admin status

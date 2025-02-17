@@ -38,7 +38,7 @@ if(isset($_GET['product_id']))
         <div class="row mt-5">
           <?php while($row =$product->fetch_assoc()){?>
             <div class="col-lg-5 col-md-6 col-md-12">
-                <img class="img-fluid w-80 pb-1" src="assets/imgs/proizvod/<?php echo $row['product_image']; ?>" id="glavnaSlika"/>
+                <img class="pb-1" src="assets/imgs/proizvod/<?php echo $row['product_image']; ?>" id="glavnaSlika"/>
                 <div class="small-slika-group">
                     <div class="small-slika-col">
                     <img class="small-slika"   width="100%" src="assets/imgs/proizvod/<?php echo $row['product_image']; ?>"/>

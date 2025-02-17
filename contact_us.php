@@ -30,7 +30,7 @@ body {
         <section class="kontakt-info">
             <div class="info-box">
                 <i class="fas fa-phone"></i>
-                <h3>Telefon</h3>
+                <h3><?=$Language["telephone"]?></h3>
                 <p>062489508</p>
             </div>
             <div class="info-box">
@@ -40,16 +40,16 @@ body {
             </div>
             <div class="info-box">
                 <i class="fas fa-map-marker-alt"></i>
-                <h3>Adresa</h3>
+                <h3><?=$Language["address"]?></h3>
                 <p>Belgrade<br>Kadinjacka 42</p>
             </div>
         </section>
 
         <section class="kontakt-form">
-            <h2>Posalji nam poruku!</h2>
+            <h2><?=$Language["msg"]?>!</h2>
             <form method="post" action="submitMessage.php">
                 <div class="kontakt-grupa">
-                    <label for="name">Ime</label>
+                    <label for="name"><?=$Language["name"]?></label>
                     <input type="text" id="ime" name="ime" value="<?php echo $_SESSION["user_name"];?>" readonly placeholder="Ime" required>
                 </div>
                 <div class="kontakt-grupa">
@@ -57,12 +57,12 @@ body {
                     <input type="email" id="email" name="email" value="<?php echo $_SESSION["user_email"];?>" readonly required>
                 </div>
                 <div class="kontakt-grupa">
-                    <label for="subject">Naslov</label>
-                    <input type="text" id="naslov" name="naslov" placeholder="Naslov" required>
+                    <label for="subject"><?=$Language["msghead"]?></label>
+                    <input type="text" id="naslov" name="naslov" placeholder="<?=$Language["msghead"]?>" required>
                 </div>
                 <div class="kontakt-grupa">
-                    <label for="poruka">Poruka</label>
-                    <textarea id="poruka" name="poruka" placeholder="Vasa poruka" required></textarea>
+                    <label for="poruka"><?=$Language["message"]?></label>
+                    <textarea id="poruka" name="poruka" placeholder="<?=$Language["message"]?>" required></textarea>
                 </div>
                 <div class="kontakt-grupa">
                     <button type="submit" name="send_message" id="send_message">Submit</button>

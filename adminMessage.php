@@ -45,8 +45,8 @@
 
 <div id="content">
     <div class="container-fluid">
-        <h1 class="mt-4">Admin User Preview</h1>
-        <p>All users in our database.</p>
+        <h1 class="mt-4">Sve poruke</h1>
+        <p>U nasoj bazi podataka</p>
         <div class="row">
             <div class="col-lg-12">
                 <div class="table-responsive">

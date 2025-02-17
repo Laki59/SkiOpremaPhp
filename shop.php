@@ -11,6 +11,7 @@ if (isset($_POST['search'])) {
   $stmt->bind_param("si", $kategorija, $price);
   $stmt->execute();
   $stvari = $stmt->get_result();
+  $page_no=1;
 } else {
   //proverava da li postoji parametar broj strane(page_no),ako postoji i nije prazan $page_no dobija tu vrednost,ako ne vrednost je 1(prva strana)
   if (isset($_GET['page_no']) && $_GET['page_no'] != "") {
@@ -82,56 +83,56 @@ if (!$stvari->num_rows) {
 
 <section id="trazi" class="py-5">
   <div class="container mt-2 py-5">
-    <p>Pronadji sta ti treba!</p>
+    <p><?=$Language["find"]?>!</p>
     <hr>
   </div>
   
   <form method="POST" action="shop.php">
     <div class="container">
       <div class="col-lg-12 col-md-12 col-sm-12">
-        <p>Kategorija</p>
+        <p><?=$Language["cate"]?></p>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Pancerice" type="radio" name="kategoriija" id="kategroija_prva" checked>
-          <label class="trazi-forma-label" for="kategroija_prva"> Pancerice </label>
+          <label class="trazi-forma-label" for="kategroija_prva"> <?=$Language["boots"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Skije" type="radio" name="kategoriija" id="kategroija_druga">
-          <label class="trazi-forma-label" for="kategroija_druga"> Skije </label>
+          <label class="trazi-forma-label" for="kategroija_druga" > <?=$Language["ski"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Rukavice" type="radio" name="kategoriija" id="kategroija_treca">
-          <label class="trazi-forma-label" for="kategroija_treca"> Rukavice </label>
+          <label class="trazi-forma-label" for="kategroija_treca"> <?=$Language["gloves"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Kaciga" type="radio" name="kategoriija" id="kategroija_cetvrta">
-          <label class="trazi-forma-label" for="kategroija_cetvrta"> Kaciga </label>
+          <label class="trazi-forma-label" for="kategroija_cetvrta"> <?=$Language["helmet"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Aktivni ves" type="radio" name="kategoriija" id="kategroija_peta">
-          <label class="trazi-forma-label" for="kategroija_peta"> Aktivni ves </label>
+          <label class="trazi-forma-label" for="kategroija_peta"> <?=$Language["underclothes"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Stapovi" type="radio" name="kategoriija" id="kategroija_sesta">
-          <label class="trazi-forma-label" for="kategroija_sesta"> Stapovi </label>
+          <label class="trazi-forma-label" for="kategroija_sesta"> <?=$Language["sticks"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Fantomka" type="radio" name="kategoriija" id="kategroija_sedam">
-          <label class="trazi-forma-label" for="kategroija_sedam"> Fantomka </label>
+          <label class="trazi-forma-label" for="kategroija_sedam"> <?=$Language["mask"]?> </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Vezovi" type="radio" name="kategoriija" id="kategroija_osam">
-          <label class="trazi-forma-label" for="kategroija_osam"> Vezovi </label>
+          <label class="trazi-forma-label" for="kategroija_osam"> <?=$Language["bindings"]?>i </label>
         </div>
         <div class="trazi-forma">
           <input class="trazi-forma-input" value="Naocare" type="radio" name="kategoriija" id="kategroija_devet">
-          <label class="trazi-forma-label" for="kategroija_devet"> Naocare </label>
+          <label class="trazi-forma-label" for="kategroija_devet"> <?=$Language["googles"]?> </label>
         </div>
       </div>
     </div>
 
     <div class="mx-auto-container mt-2 px-3">
       <div class="col-lg-12 col-md-12 col-sm-12">
-        <p>Cena</p>
+        <p><?=$Language["price"]?></p>
         <input type="range" name="cena_trazi" class="cena-form w-50" min="1" max="9999" id="cenaRange" oninput="updatePrice(this.value)">
         <div class="w-50">
           <span style="float: left;">1</span>
@@ -141,7 +142,7 @@ if (!$stvari->num_rows) {
       </div>
     </div>
     <div class="form-group my-2 mx-2">
-          <input type="submit" name="search" value="Trazi" class="btn btn-primary">
+          <input type="submit" name="search" value="<?=$Language["search"]?>" class="btn btn-primary">
       </div>
       </form>
 
@@ -152,9 +153,9 @@ if (!$stvari->num_rows) {
       <!--featured-->
       <section id="featured-shop" class="my-5 py-5">
         <div class="container mt-5 py-3">
-          <h3>Nasi proizovdi</h3>
+          <h3><?=$Language["prdct"]?></h3>
           <hr>
-          <p>Nasi proizvodi</p>
+          <p><?=$Language["prdct1"]?></p>
         </div>
         <!--row stavlja stvari u red-->
         <div class="row mx-auto container-fluid">
@@ -172,7 +173,7 @@ if (!$stvari->num_rows) {
             <h5 class="p-name"><?php echo $row['product_name'];?></h5>
             <h4 class="p-price"><?php echo $row['product_price'];?> din.</h4>
             
-            <a href="<?php echo "single.php?product_id=" . $row['product_id'];?>"><button class="buy-btn">Kupi sada</button> </a>
+            <a href="<?php echo "single.php?product_id=" . $row['product_id'];?>"><button class="buy-btn"><?=$Language["dKupi"]?></button> </a>
           </div>
           <?php }?>
           <nav aria-label="page navigation example">

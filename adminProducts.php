@@ -73,8 +73,8 @@
 
     <div id="content">
         <div class="container-fluid">
-            <h1 class="mt-4">Admin Order Preview</h1>
-            <p>All orders in our database.</p>
+            <h1 class="mt-4">Svi proizvodi</h1>
+            <p>U nasoj bazi podataka</p>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="table-responsive">

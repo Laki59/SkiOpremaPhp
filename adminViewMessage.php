@@ -1,17 +1,16 @@
 <?php
 session_start();
-include('server/connection.php'); // Database connection
+include('server/connection.php'); 
 
-// Check if admin is logged in
+
 if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
 }
 
-// Get the user ID of the logged-in user
+
 $user_id = $_SESSION['user_id'];
 
-// Check if user is an admin
 $stmt = $conn->prepare("SELECT admin FROM users WHERE user_id = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
@@ -23,21 +22,19 @@ if ($row['admin'] !== 'da') {
     exit();
 }
 
-// Check if message_id is set in the query string
 if (!isset($_GET['message_id'])) {
-    header('Location: adminHome.php'); // Redirect to admin home if no message ID
+    header('Location: adminHome.php');
     exit();
 }
 
 $message_id = $_GET['message_id'];
 
-// Fetch the message from the database
 $stmt = $conn->prepare("SELECT * FROM message WHERE message_id = ?");
 $stmt->bind_param("i", $message_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// If message not found, redirect
+
 if ($result->num_rows == 0) {
     header('Location: adminHome.php');
     exit();
@@ -61,7 +58,7 @@ $message = $result->fetch_assoc();
 
 <div id="content">
     <div class="container mt-4">
-        <h1>Message Details</h1>
+        <h1>Detalji poruke</h1>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Naslov: <?php echo htmlspecialchars($message['subject']); ?></h5>

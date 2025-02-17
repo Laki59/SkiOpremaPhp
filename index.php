@@ -1,8 +1,9 @@
 <?php 
 session_start();
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="rs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +19,10 @@ session_start();
       <!-- HOME -->
        <section id="home">
         <div class="container">
-          <h1><b>DOBRODOSLI</b></h1>
-          <h1><span><b>NAJBOLJE CENE</b></span> Ove sezone</h1>
-          <p>Sva oprema koja vam treba!</p>
-          <a href="shop.php"> <button class="text-uppercase">Kupi sada!</button></a>
+          <h1><b><?=$Language["Welcome"]?></h1>
+          <h1><span><b><?=$Language["bestprice"]?></b></span> <?=$Language["thisseason"]?></h1>
+          <p><?=$Language["itez"]?></p>
+          <a href="shop.php"> <button class="text-uppercase"><?=$Language["dKupi"]?></button></a>
         </div>
        </section>
 
@@ -44,22 +45,22 @@ session_start();
           <div class="slike col-lg-4 col-md-12 col-sm-12 p-0">
             <img class="img-fluid" src="assets/imgs/skijeDonje.jpg">
             <div class="details">
-              <h2><B>SKIJE</B></h2>
-              <a href="shop.php"> <button class="text-uppercase">Kupi sada!</button></a>
+              <h2><B><?=$Language["ski"]?></B></h2>
+              <a href="shop.php"> <button class="text-uppercase"><?=$Language["dKupi"]?></button></a>
             </div>
           </div>
           <div class="slike col-lg-4 col-md-12 col-sm-12 p-0">
             <img class="img-fluid" src="assets/imgs/pancericeDonje.jpg"/>
             <div class="details">
-              <h2><B>PANCERICE</B></h2>
-              <a href="shop.php"> <button class="text-uppercase">Kupi sada!</button></a>
+              <h2><B><?=$Language["boots"]?></B></h2>
+              <a href="shop.php"> <button class="text-uppercase"><?=$Language["dKupi"]?></button></a>
             </div>
           </div>
           <div class="slike col-lg-4 col-md-12 col-sm-12 p-0">
             <img class="img-fluid" src="assets/imgs/odelaDonje.jpg"/>
             <div class="details">
-              <h2><b>SKI OPREMA</b></h2>
-              <a href="shop.php"> <button class="text-uppercase">Kupi sada!</button></a>
+              <h2><b><?=$Language["gear"]?></b></h2>
+              <a href="shop.php"> <button class="text-uppercase"><?=$Language["dKupi"]?></button></a>
             </div>
           </div>
         </div>
@@ -70,9 +71,9 @@ session_start();
        <section id="featured" class="my-5 pb-5">
         <!--Container ima predefinisane padding levo i desno da stvari ne doticu krajeve strane,mt je margin top i py je padding po y osi-->
         <div class="container text-center mt-5 py-5">
-          <h3>Nasi najbolji proizvodi!</h3>
+          <h3><?=$Language["prdct"]?></h3>
           <hr>
-          <p>Nasi proizovdi</p>
+          <p><?=$Language["prdct1"]?></p>
         </div>
         <!--fluid stavlja stvari kako treba-->
         <div class="row mx-auto container-fluid">
@@ -91,7 +92,7 @@ session_start();
             </div>
             <h5 class="p-name"><?php echo $row['product_name'];?></h5>
             <h4 class="p-price"><?php echo $row['product_price'];?> din.</h4>
-          <a href="<?php echo "single.php?product_id=" . $row['product_id'];?>"><button class="buy-btn">KUPI SADA</button> </a>
+          <a href="<?php echo "single.php?product_id=" . $row['product_id'];?>"><button class="buy-btn"><?=$Language["dKupi"]?></button> </a>
           </div>
           <?php }?>
 
@@ -100,9 +101,9 @@ session_start();
         <!--Baner-->
         <section id="banner" class="my-5 py-5">
           <div class="container">
-            <h4><b>Upoznaj nas jos bolje!</b></h4>
-            <h1><b>VIDI KO SMO MI!</b></h1>
-            <a href="blog.php"><button class="text-uppercase">Procitaj sada!</button></a>
+            <h4><b><?=$Language["meet"]?>!</b></h4>
+            <h1><b><?=$Language["look"]?>!</b></h1>
+            <a href="blog.php"><button class="text-uppercase"><?=$Language["read"]?></button></a>
           </div>
         </section>
         <!--Footer-->

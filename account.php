@@ -81,28 +81,28 @@ else{
             <p style="color:green" id="form-error">
                 <?php if (isset($_GET['message'])) { echo $_GET['message']; } ?>
             </p>
-            <h3> Vas nalog </h3>
+            <h3> <?=$Language["acnt"]?> </h3>
             <div class="nalog-info">
-                <p><b>Ime: </b><span><?php echo $_SESSION["user_name"];?></span></p>       
+                <p><b><?=$Language["name"]?>: </b><span><?php echo $_SESSION["user_name"];?></span></p>       
                 <p><b>Email: </b><span><?php echo $_SESSION["user_email"];?></span></p>  
                 <p><a href="account.php?logout=1" id="logout-btn">Logout</a></p>
             </div>
         </div>
         <div class="text-center mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
             <form id="sifra-form" method="post" action="account.php">
-                <h3>Promeni lozinku</h3>
+                <h3><?=$Language["changepas"]?></h3>
                 <div class="form-groupa">
-                    <label>Lozinka</label><br>
+                    <label><?=$Language["password"]?></label><br>
                     <input type="password" class="kontrola-forma" id="nalog-sifra" placeholder="Lozinka" name="password">
                 </div>
                 <br>
                 <div class="form-groupa">
-                    <label>Potvrdi Lozinku</label><br>
+                    <label><?=$Language["password2"]?></label><br>
                     <input type="password" class="kontrola-forma" id="nalog-password-confirm" placeholder="Potvrdi Lozinku" name="password-confirm">
                 </div>
                 <br>
                 <div class="form-groupa">
-                    <input type="submit" value="Promeni lozinku" name="change_password" class="btn" id="btn-change">
+                    <input type="submit" value="<?=$Language["changepas"]?>" name="change_password" class="btn" id="btn-change">
                 </div>
             </form>
         </div>
@@ -111,16 +111,16 @@ else{
 
 <section class="proizvod container my-2 py-2">
         <div class="container mt-5">
-            <h2 class="font-weight-bold text-center">Vase porudzbine</h2>
+            <h2 class="font-weight-bold text-center"><?=$Language["yOrder"]?></h2>
             <hr>
         </div>
         <table class="mt-5 pt-5">
             <tr>
-            <th>ID porudzbine</th>
-                <th>Cena porudzbine</th>
-                <th>Status porudzbine</th>
-                <th>Datum porudzbine</th>
-                <th>Detalji</th>
+            <th><?=$Language["iOrder"]?></th>
+                <th><?=$Language["pOrder"]?></th>
+                <th><?=$Language["sOrder"]?></th>
+                <th><?=$Language["dOrder"]?></th>
+                <th><?=$Language["details"]?></th>
             </tr>
             <?php while($row=$proizvodi->fetch_assoc()){  ?>
             <tr>
@@ -140,7 +140,7 @@ else{
                 <td>
                     <form method="POST" action="order_details.php">
                         <input type="hidden" value="<?php echo $row['order_id']; ?>" name='order_id'/>
-                        <input class="btn proizvod-detalji-btn" name="detalji-btn" type="submit" value="Detalji"/>
+                        <input class="btn proizvod-detalji-btn" name="detalji-btn" type="submit" value="<?=$Language["details"]?>"/>
                    </form>
               </td>
             </tr>
