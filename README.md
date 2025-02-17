@@ -15,19 +15,19 @@ The user can purchase and review any item he wants. The items can be purchased i
 Afterwards the user can checkout and buy this products. Currently only option is cash on delivery,but I'm looking to add a paypal sandbox server.
 
 For the making of this application I used:
--Html
--Css
--Bootstrap
--Php
--JavaScript
--MYSql
+- Html
+- Css
+- Bootstrap
+- Php
+- JavaScript
+- MYSql
 
 Things to be added:
--Discount feature.
--More paying options.
--Removing of the message feture as is,and establish a polished and smooth email system.
--Overal fixing some of design issues.
--On single item page,the items below should be of the same kind(ex. if i look at skis,it should only recommend me skis and so on).
+- Discount feature.
+- More paying options.
+- Removing of the message feture as is,and establish a polished and smooth email system.
+- Overal fixing some of design issues.
+- On single item page,the items below should be of the same kind(ex. if i look at skis,it should only recommend me skis and so on).
 
 Preview:
 
