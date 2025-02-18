@@ -41,17 +41,17 @@ if(isset($_GET['product_id']))
                 <img class="pb-1" src="assets/imgs/proizvod/<?php echo $row['product_image']; ?>" id="glavnaSlika"/>
                 <div class="small-slika-group">
                     <div class="small-slika-col">
-                    <img class="small-slika"   width="100%" src="assets/imgs/proizvod/<?php echo $row['product_image']; ?>"/>
+                    <img class="small-slika" src="assets/imgs/proizvod/<?php echo $row['product_image']; ?>"/>
                     </div>
                     <div class="small-slika-col">
                       <!--onerror obezbedjuje da ako pomocne slike nisu ubacene da se prikazuju kao prazne kutije i da nemaju "no data" slicicu u gornjem levom uglu-->
-                    <img class="small-slika" width="100%" onerror="this.style.display='none'"  src="assets/imgs/proizvod/<?php echo $row['product_image2']; ?>"/>
+                    <img class="small-slika" onerror="this.style.display='none'"  src="assets/imgs/proizvod/<?php echo $row['product_image2']; ?>"/>
                     </div>
                     <div class="small-slika-col">
-                    <img class="small-slika" width="100%" onerror="this.style.display='none'"   src="assets/imgs/proizvod/<?php echo $row['product_image3']; ?>"/>
+                    <img class="small-slika" onerror="this.style.display='none'"   src="assets/imgs/proizvod/<?php echo $row['product_image3']; ?>"/>
                     </div>
                     <div class="small-slika-col">
-                    <img class="small-slika" width="100%" onerror="this.style.display='none'" src="assets/imgs/proizvod/<?php echo $row['product_image4']; ?>"/>
+                    <img class="small-slika" onerror="this.style.display='none'" src="assets/imgs/proizvod/<?php echo $row['product_image4']; ?>"/>
                     </div>
                 </div>
             </div>

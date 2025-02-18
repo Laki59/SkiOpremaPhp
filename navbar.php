@@ -54,7 +54,7 @@ $Language = parse_ini_file("assets/languages/$lang.ini");
          
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="nav-link" href="?lang=en">engleski</a>
+        <a class="nav-link" href="?lang=en"></i></i>engleski</a>
         <a class="nav-link" href="?lang=rs">srpski</a>
         </div>
       </li>

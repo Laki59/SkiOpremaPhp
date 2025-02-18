@@ -94,24 +94,7 @@ session_start();
                 <p>Kompanija koristi najsavremenije materijale, uključujući karbonska vlakna, titanijumske legure i specijalne drvene jezgre kako bi obezbedila optimalan balans između čvrstoće i fleksibilnosti. Posebna pažnja posvećena je aerodinamičkom dizajnu i specijalnom premazu koji smanjuje trenje i poboljšava klizanje na snegu.</p>
         </div>
     </div>
-
-
-    <script>
-        /*Stavlja sve stvari koje imaju klasu section u NodeList-u */
-        const sections = document.querySelectorAll('.section');
-        /*Ova funkcija sluzi da handluje scroll event.
-        Za svaki elemnt u listi vrati poziciju i velicinu elementa da korisnik moze da vidi */
-        function handleScroll() {
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    section.classList.add('show');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        document.addEventListener('DOMContentLoaded', handleScroll);
+    <script src="assets/js/scrollBlog.js">
     </script>
      <?php include 'footer.html';?>
 </body>

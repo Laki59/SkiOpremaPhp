@@ -91,6 +91,7 @@ function TotalCart(){
 <body>
 <?php include 'navbar.php';?>
 
+
       <section class="kolica container my-5 py-5">
       <p style="color:red"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
         <!--top margina za kontejner bug-->
@@ -140,8 +141,10 @@ function TotalCart(){
         <div class="kolica-total">
             <table>
                 <tr>
+                <?php if (!empty($_SESSION['cart'])) { ?>
                     <td>Totalna cena</td>
                     <td><?php echo $_SESSION['total'];?> din.</td>
+                    <?php }else{ echo "<td>0 din.</td>";}?>
                 </tr>
             </table>
         </div>
